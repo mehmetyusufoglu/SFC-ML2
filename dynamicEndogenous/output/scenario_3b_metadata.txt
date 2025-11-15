@@ -1,0 +1,25 @@
+Scenario: Partial Planning (Failed Transition)
+Description: State credit without capital controls or productivity program triggers instability.
+
+Parameters:
+  propensity_to_consume = 0.85
+  tax_rate = 0.2
+  firm_markup = 0.26
+  wage_inflation_sensitivity = 0.2
+  wage_unemployment_sensitivity = 0.3
+  investment_sensitivity_to_pi = 0.5
+  nominal_interest_rate = 0.006
+  target_profit_rate = 0.15
+  global_profit_rate = 0.1
+  capital_flight_sensitivity = 0.5
+  capital_controls_effectiveness = 0.0
+  infrastructure_productivity_effect = 0.0
+  enable_productivity_feedback = False
+  enable_capital_flight = True
+  enable_credit_rationing = True
+  enable_capital_destruction = True
+
+Regimes:
+  finance = StateLedNationalizedBanking
+  external = FloatingExchangeRate
+  distribution = ConflictInflationRegime

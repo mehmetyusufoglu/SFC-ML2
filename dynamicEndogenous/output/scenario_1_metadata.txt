@@ -1,0 +1,25 @@
+Scenario: Social Democracy (Fixed Share/No Conflict)
+Description: Profit-led growth with a fixed wage share; prices only move via policy shield.
+
+Parameters:
+  propensity_to_consume = 0.85
+  tax_rate = 0.2
+  firm_markup = 0.25
+  wage_inflation_sensitivity = 1.0
+  wage_unemployment_sensitivity = 0.5
+  investment_sensitivity_to_pi = 0.5
+  nominal_interest_rate = 0.03
+  target_profit_rate = 0.15
+  global_profit_rate = 0.1
+  capital_flight_sensitivity = 0.5
+  capital_controls_effectiveness = 0.0
+  infrastructure_productivity_effect = 0.02
+  enable_productivity_feedback = True
+  enable_capital_flight = True
+  enable_credit_rationing = True
+  enable_capital_destruction = True
+
+Regimes:
+  finance = ProfitLedPrivateBanking
+  external = FloatingExchangeRate
+  distribution = FixedShareRegime
